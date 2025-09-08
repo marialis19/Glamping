@@ -1,8 +1,45 @@
 /* Estilos específicos del hero de la página de inicio */
 .hero-home {
-    height: 50vh;
-    color: var(--blanco);
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/hero_home.jpg") no-repeat center center;
+    /* La imagen de fondo */
+    background: url("../img/vista_cabaña.jpg") no-repeat center center;
     background-size: cover;
+    
+    /* Configuración de tamaño y posicionamiento */
     position: relative;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20vh;
+}
+
+/* La capa de color semitransparente que se superpone a la imagen */
+.hero-home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.1;
+}
+
+/* Asegura que el contenido esté por encima de la capa semitransparente */
+.hero-home h1,
+.hero-home p,
+.hero-home a {
+    color: var(--blanco);
+    position: relative;
+    z-index: 1; 
+}
+
+.hero-home h1 {
+    font-size: 2.9rem;
+}
+
+.hero-home p {
+    font-size: 1.9rem;
 }

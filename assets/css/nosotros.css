@@ -1,0 +1,22 @@
+/* Estilos específicos del hero de la página de Nosotros */
+.nosotros-hero {
+    background: url("../img/olla2.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+/* Asegura que todas las imágenes del carrusel tengan la misma altura */
+.img-carousel-nosotros {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Efecto al pasar el mouse sobre las tarjetas de valores */
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2) !important;
+    border-color: black;
+}

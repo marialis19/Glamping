@@ -1,81 +1,87 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Función para cargar partials
-  const loadPartial = (url, elementId, callback = () => {}) => {
-    fetch(url)
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById(elementId).innerHTML = html;
-        callback();
-      })
-      .catch(error => console.error(`Error loading partial ${url}:`, error));
-  };
-
-  // Cargar Header y Footer
-  loadPartial('partials/header.html', 'header-placeholder');
-  loadPartial('partials/footer.html', 'footer-placeholder');
-
-  // Cargar el antefooter (se necesita una lógica adicional)
-  // Esta es la parte que cambia para cada página
-  const page = document.body.dataset.page;
-
-  // Lógica para el antefooter dinámico
-  if (page === 'index') {
-    const antefooterData = {
-      title: 'Descubrí lo que te espera: Momentos inolvidables!',
-      images: [
-        ['silla_pica.jpg', 'plan_disfrute.jpg', 'fuego_vino.jpg', 'mate2.jpg'],
-        ['fogon_externo.jpg', 'ciclista77.jpg', 'chica_sentada.jpg', 'disfrute22.jpg']
-      ]
+    // Función para cargar partials
+    const loadPartial = (url, elementId, callback = () => {}) => {
+        fetch(url)
+            .then(response => response.text())
+            .then(html => {
+                const element = document.getElementById(elementId);
+                if (element) {
+                    element.innerHTML = html;
+                    callback();
+                } else {
+                    console.error(`Element with ID '${elementId}' not found.`);
+                }
+            })
+            .catch(error => console.error(`Error loading partial ${url}:`, error));
     };
-    loadAntefooter(antefooterData);
-  } else if (page === 'contacto') {
-    const antefooterData = {
-      title: 'Descubrí lugares recomendados',
-      images: [
-        ['cupula2.jpg', 'balneario.jpg', 'dique.jpg', 'parque.jpg'],
-        ['iglesia.jpg', 'arroyo.jpg', 'laberinto.jpg', 'ollas.jpg']
-      ]
-    };
-    loadAntefooter(antefooterData);
-  }
 
-  // Función para cargar el antefooter con datos
-  function loadAntefooter(data) {
-    loadPartial('partials/antefooter.html', 'antefooter-placeholder', () => {
-      document.getElementById('antefooterTitle').textContent = data.title;
-      const carouselInner = document.getElementById('antefooterCarouselInner');
-      carouselInner.innerHTML = ''; // Limpiar contenido
+    // Cargar Header y Footer
+    loadPartial('../partials/header.html', 'header-placeholder');
+    loadPartial('../partials/footer.html', 'footer-placeholder');
 
-      data.images.forEach((slideImages, index) => {
-        const slide = document.createElement('div');
-        slide.classList.add('carousel-item');
-        if (index === 0) slide.classList.add('active');
+    // Cargar el antefooter (se necesita una lógica adicional)
+    const page = document.body.dataset.page;
 
-        const flexContainer = document.createElement('div');
-        flexContainer.classList.add('d-flex', 'justify-content-center', 'gap-3');
+    // Lógica para el antefooter dinámico
+    if (page === 'index') {
+        const antefooterData = {
+            title: 'Descubrí lo que te espera: Momentos inolvidables!',
+            images: [
+                ['silla_pica.jpg', 'plan_disfrute.jpg', 'fuego_vino.jpg', 'mate2.jpg'],
+                ['fogon_externo.jpg', 'ciclista77.jpg', 'chica_sentada.jpg', 'disfrute22.jpg']
+            ]
+        };
+        loadAntefooter(antefooterData);
+    } else if (page === 'contacto') {
+        const antefooterData = {
+            title: 'Descubrí lugares recomendados',
+            images: [
+                ['cupula2.jpg', 'balneario.jpg', 'dique.jpg', 'parque.jpg'],
+                ['iglesia.jpg', 'arroyo.jpg', 'laberinto.jpg', 'ollas.jpg']
+            ]
+        };
+        loadAntefooter(antefooterData);
+    } else if (page === 'nosotros') {
+        const antefooterData = {
+            title: 'Descubrí lo que te espera: Momentos inolvidables!',
+            images: [
+                ['silla_pica.jpg', 'plan_disfrute.jpg', 'fuego_vino.jpg', 'mate2.jpg'],
+                ['fogon_externo.jpg', 'ciclista77.jpg', 'chica_sentada.jpg', 'disfrute22.jpg']
+            ]
+        };
+        loadAntefooter(antefooterData);
+    }
 
-        slideImages.forEach(imageName => {
-          const img = document.createElement('img');
-          img.src = `assets/img/${imageName}`;
-          img.classList.add('img-card');
-          img.alt = ''; // Puedes agregar un alt si lo deseas
-          flexContainer.appendChild(img);
+    // Función para cargar el antefooter con datos
+    function loadAntefooter(data) {
+        loadPartial('../partials/antefooter.html', 'antefooter-placeholder', () => {
+            const antefooterTitle = document.getElementById('antefooterTitle');
+            if (antefooterTitle) {
+                antefooterTitle.textContent = data.title;
+            }
+            const carouselInner = document.getElementById('antefooterCarouselInner');
+            if (carouselInner) {
+                carouselInner.innerHTML = '';
+
+                data.images.forEach((slideImages, index) => {
+                    const slide = document.createElement('div');
+                    slide.classList.add('carousel-item');
+                    if (index === 0) slide.classList.add('active');
+
+                    const flexContainer = document.createElement('div');
+                    flexContainer.classList.add('d-flex', 'justify-content-center', 'gap-3');
+
+                    slideImages.forEach(imageName => {
+                        const img = document.createElement('img');
+                        img.src = `../assets/img/${imageName}`;
+                        img.classList.add('img-card');
+                        img.alt = '';
+                        flexContainer.appendChild(img);
+                    });
+                    slide.appendChild(flexContainer);
+                    carouselInner.appendChild(slide);
+                });
+            }
         });
-        slide.appendChild(flexContainer);
-        carouselInner.appendChild(slide);
-      });
-    });
-  }
-// Cargar el Hero
-    const heroPlaceholder = document.getElementById('hero-placeholder');
-    if (heroPlaceholder) {
-        const heroClass = heroPlaceholder.dataset.class;
-        const heroTitle = heroPlaceholder.dataset.title;
-
-        loadPartial('partials/hero.html', 'hero-placeholder', () => {
-            const heroSection = document.getElementById('hero-placeholder').firstElementChild;
-            heroSection.classList.add(heroClass);
-            document.getElementById('heroTitle').textContent = heroTitle;
-        });
-  }
+    }
 });
