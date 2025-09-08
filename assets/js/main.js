@@ -66,4 +66,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+// Cargar el Hero
+    const heroPlaceholder = document.getElementById('hero-placeholder');
+    if (heroPlaceholder) {
+        const heroClass = heroPlaceholder.dataset.class;
+        const heroTitle = heroPlaceholder.dataset.title;
+
+        loadPartial('partials/hero.html', 'hero-placeholder', () => {
+            const heroSection = document.getElementById('hero-placeholder').firstElementChild;
+            heroSection.classList.add(heroClass);
+            document.getElementById('heroTitle').textContent = heroTitle;
+        });
+  }
 });
