@@ -1,3 +1,22 @@
+/* Restablecer márgenes y rellenos predeterminados del navegador */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Asegura que la altura del HTML y el body sea el 100% de la ventana */
+}
+
+/* Hacemos el body un contenedor flexbox para el sticky footer */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* El MAIN ocupa todo el espacio disponible */
+main {
+    flex: 1; /* Esto empuja el antefooter y el footer al final de la página */
+}
+
 /* Paleta de colores */
 :root {
   --verde-bosque: #14402a;

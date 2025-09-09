@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const antefooterData = {
             title: 'Descubrí lo que te espera: Momentos inolvidables!',
             images: [
-                ['silla_pica.jpg', 'plan_disfrute.jpg', 'fuego_vino.jpg', 'mate2.jpg'],
-                ['fogon_externo.jpg', 'ciclista77.jpg', 'chica_sentada.jpg', 'disfrute22.jpg']
+                ['vista_parapente.jpg', 'piedras.jpg', 'picadita.jpg', 'olla.jpg'],
+                ['nosotros.jpg', 'lacues.jpg', 'fuegov_vino.jpg', 'minacla.jpg']
             ]
         };
         loadAntefooter(antefooterData);
