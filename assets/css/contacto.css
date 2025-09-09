@@ -1,0 +1,53 @@
+/* Este archivo CSS se ha limpiado de estilos no utilizados, como los del "hero" de cabañas, que no son relevantes para la página de contacto. */
+
+/* Asegura que el contenedor del mapa no exceda el ancho de su padre */
+.mapa-container {
+    max-width: 100%;
+}
+
+/* Hace que el iframe sea completamente responsive */
+.mapa-container iframe {
+    width: 100%;
+    height: 450px; /* Puedes ajustar la altura según prefieras */
+    border-radius: 8px; /* Opcional: añade bordes redondeados */
+}
+
+/* Estilos para el botón del acordeón cuando está enfocado o activo */
+.accordion-button:not(.collapsed) {
+    color: var(--blanco); /* Color del texto del título cuando está abierto */
+    background-color: var(--verde); /* Color de fondo del título cuando está abierto */
+    border-color: var(--verde); /* Color del borde */
+    box-shadow: none; /* Elimina la sombra azul por defecto */
+}
+
+/* Estilos para el botón del acordeón cuando se pasa el mouse o se enfoca */
+.accordion-button:focus {
+    border-color: var(--verde); /* Borde verde al enfocar */
+    box-shadow: 0 0 0 0.25rem rgba(91, 160, 98, 0.25); /* Sombra suave verde */
+}
+
+/* Estilo para el cuerpo de la respuesta (opcional, para que combine) */
+.accordion-body {
+    background-color: var(--blanco-claro); /* Puedes ajustar un blanco o gris muy claro */
+    color: var(--negro); /* Color de texto para el cuerpo */
+}
+
+/* Color del borde inferior del ítem del acordeón */
+.accordion-item {
+    border-color: var(--verde-oscuro);
+}
+
+.antefooter {
+    background-color: #000; /* Negro sólido */
+    padding: 35px 0;
+    margin: 0;
+}
+
+.img-card {
+    width: 250px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    align-self: flex-start;
+}

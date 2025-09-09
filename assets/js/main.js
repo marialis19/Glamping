@@ -45,6 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
                     carouselInner.appendChild(slide);
                 });
             }
+
+            // Lógica para cambiar el href del botón del antefooter según la página
+            const page = document.body.dataset.page;
+            if (page === 'actividades') {
+                const antefooterButton = document.querySelector('#antefooter-placeholder .btn');
+                if (antefooterButton) {
+                    antefooterButton.href = 'contacto.html';
+                }
+            }
         });
     }
 
