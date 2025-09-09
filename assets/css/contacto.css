@@ -1,4 +1,8 @@
-/* Este archivo CSS se ha limpiado de estilos no utilizados, como los del "hero" de cabañas, que no son relevantes para la página de contacto. */
+/* Estilos para el hero de la página de Contacto */
+.contacto-hero {
+    background: url("../img/arroyo9.jpg") no-repeat center center;
+    background-size: cover;
+}
 
 /* Asegura que el contenedor del mapa no exceda el ancho de su padre */
 .mapa-container {

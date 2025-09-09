@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const page = document.body.dataset.page;
     if (page === 'index') {
         const antefooterData = {
-            title: 'Descubrí lo que te espera: Momentos inolvidables!',
+            title: 'Descubrí tu plan ideal en La Cuesta!',
             images: [
                 ['silla_pica.jpg', 'plan_disfrute.jpg', 'fuego_vino.jpg', 'mate2.jpg'],
                 ['fogon_externo.jpg', 'ciclista77.jpg', 'chica_sentada.jpg', 'disfrute22.jpg']
