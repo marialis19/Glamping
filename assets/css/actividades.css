@@ -1,0 +1,25 @@
+/* Estilos para el hero de la página de Actividades */
+.actividades-hero {
+    background: url("../img/ciclismo2.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+/* Estilos para las imágenes dentro de las tarjetas */
+.img-actividad {
+    height: 250px; /* Prueba con un valor más bajo */
+    object-fit: cover; /* Para que la imagen se ajuste y cubra el espacio */
+    transition: transform 0.3s ease-in-out; /* Transición para el efecto hover */
+}
+/* Efecto hover para las imágenes */
+.img-actividad:hover {
+    transform: scale(1.05); /* Hace la imagen un 5% más grande al pasar el mouse */
+}
+.calendario-incrustado {
+    max-width: 800px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar en la página */
+}
+/* Esto asegura que el iframe sea responsive y se adapte al contenedor */
+.calendario-incrustado iframe {
+    width: 100%;
+    height: 600px; /* Puedes ajustar la altura según necesites */
+}

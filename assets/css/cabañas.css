@@ -1,29 +1,7 @@
 /* Estilos para el hero de la página Cabañas */
 .cabañas-hero {
-    height: 50vh; 
-    color: var(--blanco);
     background: url("../img/balneario.jpg") no-repeat center center;
     background-size: cover;
-    position: relative;
-    text-align: center;
-}
-
-/* Capa de color semitransparente sobre la imagen */
-.cabañas-hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000000; 
-    opacity: 0.5;
-}
-
-/* Asegura que el título esté por encima de la capa semitransparente */
-.cabañas-hero h1 {
-    position: relative;
-    z-index: 1;
 }
 
 /* Estilos para las imágenes del carrusel */
