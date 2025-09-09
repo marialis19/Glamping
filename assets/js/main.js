@@ -81,14 +81,23 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         };
         loadAntefooter(antefooterData);
+    } else if (page === 'cabañas') {
+        const antefooterData = {
+            title: 'Descubrí las imágenes de nuestras cabañas',
+            images: [
+                ['cabaña_costado.jpg', 'cabañas_lejos.jpg', 'nieve2.jpg', 'vista2.jpg'],
+                ['nieve_frente.jpg', 'frente_cabaña.jpg', 'cama_noche.jpg', 'cama.jpg']
+            ]
+        };
+        loadAntefooter (antefooterData);
     }
 
     // Lógica para que el carrusel avance al hacer clic
-    const carouselNosotros = document.getElementById('nosotrosCarousel');
-    if (carouselNosotros) {
-        carouselNosotros.addEventListener('click', () => {
-            const carouselInstance = new bootstrap.Carousel(carouselNosotros);
+    const clickableCarousels = document.querySelectorAll('.clickable-carousel');
+    clickableCarousels.forEach(carousel => {
+        carousel.addEventListener('click', () => {
+            const carouselInstance = new bootstrap.Carousel(carousel);
             carouselInstance.next();
         });
-    }
+    })
 });

@@ -1,0 +1,77 @@
+/* Estilos para el hero de la página Cabañas */
+.cabañas-hero {
+    height: 50vh; 
+    color: var(--blanco);
+    background: url("../img/balneario.jpg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+
+/* Capa de color semitransparente sobre la imagen */
+.cabañas-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000; 
+    opacity: 0.5;
+}
+
+/* Asegura que el título esté por encima de la capa semitransparente */
+.cabañas-hero h1 {
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos para las imágenes del carrusel */
+.img-cabana {
+    height: 620px; /* Ajusta la altura a tu gusto */
+    object-fit: cover;
+}
+
+/* Estilos para la lista de servicios */
+.list-unstyled li {
+    font-size: 1.1rem;
+}
+
+.list-unstyled i {
+    font-size: 1.5rem;
+}
+
+/* Estilos para el carrusel de imágenes interiores */
+.img-interior {
+    height: 450px; /* Puedes ajustar la altura para que se adapte mejor a tus fotos */
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-interior:hover {
+    transform: scale(1.05);
+}
+
+.carousel-inner.rounded-3 {
+    border-radius: var(--bs-border-radius-xl) !important; /* Fuerza el redondeo */
+}
+
+/* Efecto hover para los íconos de servicios */
+.list-unstyled li i {
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.list-unstyled li i:hover {
+    color: var(--arena); /* Cambia el color al pasar el mouse */
+    transform: scale(1.1); /* Hace el ícono un poco más grande */
+}
+
+/* Color negro puro */
+.bg-pure-black {
+    background-color: #14402a;     
+}
+
+/* Borde negro puro */
+.border-pure-black {
+    border-color: #000000 !important;
+}
