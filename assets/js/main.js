@@ -90,6 +90,15 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         };
         loadAntefooter (antefooterData);
+    } else if (page === 'actividades') {
+        const antefooterData = {
+            title: 'Más aventuras en La Cuesta Glamping',
+            images: [
+                ['caida2.jpg', 'caba.jpg', 'desa.jpg', 'ciclista77.jpg'],
+                ['nene.jpg', 'okey.jpg', 'vista_parapente.jpg', 'dique.jpg']
+            ]
+        };
+        loadAntefooter (antefooterData);
     }
 
     // Lógica para que el carrusel avance al hacer clic
