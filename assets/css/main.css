@@ -71,14 +71,11 @@ body {
 }
 
 .btn-primary:active {
-    background-color: var(--arena) !important;
-    border-color: var(--arena) !important;
-    box-shadow: none !important;
-    color: var(--blanco) !important;
+    background-color: var(--arena);
+    border-color: var(--arena);
+    box-shadow: none;
+    color: var(--blanco);
 }
-
-/* Cards */
-/* (Aquí irán los estilos de tarjetas si los tienes) */
 
 /* Footer */
 footer {

@@ -51,18 +51,3 @@
 .accordion-item {
     border-color: var(--verde-oscuro);
 }
-
-.antefooter {
-    background-color: #000; /* Negro sólido */
-    padding: 35px 0;
-    margin: 0;
-}
-
-.img-card {
-    width: 250px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-    align-self: flex-start;
-}

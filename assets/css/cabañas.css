@@ -31,7 +31,7 @@
 }
 
 .carousel-inner.rounded-3 {
-    border-radius: var(--bs-border-radius-xl) !important; /* Fuerza el redondeo */
+    border-radius: var(--bs-border-radius-xl);
 }
 
 /* Efecto hover para los íconos de servicios */
