@@ -71,10 +71,10 @@ body {
 }
 
 .btn-primary:active {
-    background-color: var(--arena);
-    border-color: var(--arena);
-    box-shadow: none;
-    color: var(--blanco);
+    background-color: var(--arena) !important;
+    border-color: var(--arena) !important;
+    box-shadow: none !important;
+    color: var(--blanco) !important;
 }
 
 /* Footer */
