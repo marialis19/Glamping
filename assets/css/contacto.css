@@ -4,6 +4,17 @@
     background-size: cover;
 }
 
+/* Nuevas reglas para la alineación de íconos de Font Awesome en las tarjetas de contacto */
+/* Define una altura y line-height fijos para los íconos para asegurar consistencia */
+.contact-icon-fa {
+    font-size: 3.5rem; /* Tamaño del ícono */
+    line-height: 1; /* Elimina espacio extra de altura de línea */
+    height: 3.5rem; /* Establece una altura fija para el contenedor del ícono */
+    display: flex; /* Para centrar el ícono dentro de su altura fija */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+}
+
 /* Asegura que el contenedor del mapa no exceda el ancho de su padre */
 .mapa-container {
     max-width: 100%;
