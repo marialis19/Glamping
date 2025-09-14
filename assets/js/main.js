@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ]
         };
         loadAntefooter(antefooterData);
-    } else if (page === 'cabañas') {
+    } else if (page === 'cabanas') {
         const antefooterData = {
             title: 'Descubrí las imágenes de nuestras cabañas',
             images: [
