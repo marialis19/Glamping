@@ -1,7 +1,7 @@
 /* Estilos específicos del hero de la página de inicio */
 .hero-home {
     /* La imagen de fondo */
-    background: url("../img/vista_cabaña.jpg") no-repeat center center;
+    background: url("/assets/img/vista_cabaña.jpg") no-repeat center center;
     background-size: cover;
     
     /* Configuración de tamaño y posicionamiento */

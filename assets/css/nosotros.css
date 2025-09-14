@@ -1,6 +1,6 @@
 /* Estilos específicos del hero de la página de Nosotros */
 .nosotros-hero {
-    background: url("../img/olla2.jpg") no-repeat center center;
+    background: url("/assets/img/olla2.jpg") no-repeat center center;
     background-size: cover;
 }
 

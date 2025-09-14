@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Función para cargar el antefooter con datos
     function loadAntefooter(data) {
-        loadPartial('../partials/antefooter.html', 'antefooter-placeholder', () => {
+        // CORRECCIÓN: Usar ruta absoluta para el partial
+        loadPartial('/partials/antefooter.html', 'antefooter-placeholder', () => {
             const antefooterTitle = document.getElementById('antefooterTitle');
             if (antefooterTitle) {
                 antefooterTitle.textContent = data.title;
@@ -36,7 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     slideImages.forEach(imageName => {
                         const img = document.createElement('img');
-                        img.src = `../assets/img/${imageName}`;
+                        // CORRECCIÓN: Usar ruta absoluta para las imágenes del carrusel
+                        img.src = `/assets/img/${imageName}`;
                         img.classList.add('img-card');
                         img.alt = '';
                         flexContainer.appendChild(img);
@@ -47,19 +49,22 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             // Lógica para cambiar el href del botón del antefooter según la página
-            const page = document.body.dataset.page;
-            if (page === 'actividades') {
-                const antefooterButton = document.querySelector('#antefooter-placeholder .btn');
-                if (antefooterButton) {
-                    antefooterButton.href = 'contacto.html';
-                }
-            }
+    const page = document.body.dataset.page;
+    if (page === 'actividades') {
+        const antefooterButton = document.querySelector('#antefooter-placeholder .btn');
+        if (antefooterButton) {
+            antefooterButton.href = '/views/contacto.html';
+            antefooterButton.textContent = 'Contactanos ahora'; // Opcional: Cambia el texto del botón
+        }
+    }
+
         });
     }
 
     // Cargar Header y Footer
-    loadPartial('../partials/header.html', 'header-placeholder');
-    loadPartial('../partials/footer.html', 'footer-placeholder');
+    // CORRECCIÓN: Usar rutas absolutas
+    loadPartial('/partials/header.html', 'header-placeholder');
+    loadPartial('/partials/footer.html', 'footer-placeholder');
 
     // Lógica para el antefooter dinámico
     const page = document.body.dataset.page;

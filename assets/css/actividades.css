@@ -1,6 +1,6 @@
 /* Estilos para el hero de la página de Actividades */
 .actividades-hero {
-    background: url("../img/ciclismo2.jpg") no-repeat center center;
+    background: url("/assets/img/ciclismo2.jpg") no-repeat center center;
     background-size: cover;
 }
 

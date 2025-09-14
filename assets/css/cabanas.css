@@ -1,6 +1,6 @@
 /* Estilos para el hero de la página Cabañas */
 .cabanas-hero {
-    background: url("../img/balneario.jpg") no-repeat center center;
+    background: url("/assets/img/balneario.jpg") no-repeat center center;
     background-size: cover;
 }
 
