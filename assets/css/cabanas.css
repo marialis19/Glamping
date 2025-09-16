@@ -10,6 +10,21 @@
     object-fit: cover;
 }
 
+/* Personalizar el ícono del toggler */
+.navbar-toggler {
+  border-color: var(--blanco);
+}
+
+/* Botones especiales de navbar */
+.navbar .btn {
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.4rem 1rem;
+  transition: all 0.3s ease;
+  min-width: 110px;
+  text-align: center;
+}
+
 /* Estilos para la lista de servicios */
 .list-unstyled li {
     font-size: 1.1rem;
