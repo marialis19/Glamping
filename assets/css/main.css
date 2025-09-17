@@ -31,6 +31,25 @@ body {
  color: #d7b377 !important;
 }
 
+.navbar-toggler {
+    border-color: #fff;
+}
+
+/* Botones especiales de navbar */
+.navbar .btn {
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.4rem 1rem;
+  transition: all 0.3s ease;
+  min-width: 110px;
+  text-align: center;
+}
+
+/* Ícono hamburguesa blanco */
+.navbar-dark .navbar-toggler-icon {
+  filter: invert(1);
+}
+
 /* Hero base (para todas las páginas excepto la de inicio) */
 .hero-base {
     height: 50vh;
