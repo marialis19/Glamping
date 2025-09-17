@@ -1,12 +1,17 @@
 # Cabañas La Cuesta Glamping - Sitio Web Oficial
 
+
 ## Descripción del Proyecto
+
 
 Este repositorio contiene el código fuente del sitio web oficial de **La Cuesta Glamping**, un exclusivo refugio en la naturaleza de las Altas Cumbres, Córdoba. Nuestro sitio web está diseñado para presentar nuestras acogedoras cabañas alpinas, los servicios que ofrecemos, las emocionantes actividades de aventura disponibles en la zona y cómo nuestros visitantes pueden contactarnos y reservar su estadía.
 
+
 El objetivo principal es brindar una experiencia de usuario fluida e informativa, permitiendo a los futuros huéspedes explorar todo lo que La Cuesta Glamping tiene para ofrecer, desde la comodidad de sus alojamientos hasta las maravillas naturales que rodean nuestra ubicación.
 
+
 ## Características Principales
+
 
 * **Diseño Responsive:** Optimizado para una visualización perfecta en cualquier dispositivo (ordenadores de escritorio, tablets y móviles).
 * **Información Detallada:** Secciones dedicadas a:
@@ -21,7 +26,9 @@ El objetivo principal es brindar una experiencia de usuario fluida e informativa
 * **Calendario de Disponibilidad:** Integración de Google Calendar para consultar fechas.
 * **Optimización SEO:** Estructura y metadatos pensados para mejorar la visibilidad en motores de búsqueda.
 
+
 ## Tecnologías Utilizadas
+
 
 * **HTML5:** Estructura semántica del contenido.
 * **CSS3:** Estilos personalizados para el diseño y la presentación.
@@ -29,16 +36,18 @@ El objetivo principal es brindar una experiencia de usuario fluida e informativa
 * **JavaScript (Vanilla JS):** Para interactividad (navegación, carruseles, acordeones, etc.).
 * **Bootstrap Icons / Font Awesome 6:** Iconografía utilizada en el sitio.
 
+
 ## 📞 Soporte y Contacto
 
+
 Para cualquier consulta, soporte técnico o futuras mejoras sobre este proyecto, no dudes en contactar al desarrollador:
+
 
 * **Desarrollador:** [Marialis, Aquino]
 * **Email de Contacto:** [marialis1903@gmail.com]
 
+
 ## Licencia
 
+
 Este proyecto está licenciado bajo la **Licencia MIT**. Puedes encontrar el texto completo de la licencia en el archivo [LICENSE](LICENSE) dentro de este repositorio.
-
----
-

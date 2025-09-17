@@ -1,5 +1,5 @@
 /* Estilos para el hero de la página Cabañas */
-.cabañas-hero {
+.cabanas-hero {
     background: url("../img/balneario.jpg") no-repeat center center;
     background-size: cover;
 }
@@ -8,6 +8,27 @@
 .img-cabana {
     height: 620px; /* Ajusta la altura a tu gusto */
     object-fit: cover;
+}
+
+.navbar-toggler {
+    border-color: #fff;
+}
+
+
+/* Botones especiales de navbar */
+.navbar .btn {
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.4rem 1rem;
+  transition: all 0.3s ease;
+  min-width: 110px;
+  text-align: center;
+}
+
+
+/* Ícono hamburguesa blanco */
+.navbar-dark .navbar-toggler-icon {
+  filter: invert(1);
 }
 
 /* Estilos para la lista de servicios */
