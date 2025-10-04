@@ -72,3 +72,13 @@
   transform: scale(1.1);
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
+
+@media (max-width: 576px) {
+    .list-group-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .list-group-item span.fs-5 {
+        margin-top: 6px;
+    }
+}
